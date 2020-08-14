@@ -1,0 +1,1345 @@
+/*CARGA LAS FUENTES*/
+@font-face {
+    font-family: 'Major Mono Display';
+    src:  url('fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src:  url('fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src:  url('fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+}
+
+header nav .nav-top
+{
+    display: flex;
+    background-color: #FFF;
+}
+
+/*NAV LEFT OCUPA UN 50% DE LA PARTE SUPERIOR DE LA NAVBAR Y CONTIENE EL LOGO*/
+header nav .nav-top .nav-left
+{
+    flex-basis: 50%;
+    /* background-color: orange; */
+}
+
+header nav .nav-top .nav-left .logo
+{
+    display: flex;
+    font-family: 'Major Mono Display';
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav .nav-top .nav-left .logo:hover
+{
+    cursor: pointer;
+}
+
+
+header nav .nav-top .nav-left .logo .logo-text
+{
+    flex-basis: 50%;
+    display: flex;
+    /* background-color: rebeccapurple; */
+}
+
+header nav .nav-top .nav-left .logo .logo-text a
+{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+
+header nav .nav-top .nav-left .logo-images
+{
+    /* background-color: green; */
+    flex-basis: 50%;
+    display: flex;
+}
+
+header nav .nav-top .nav-left .logo-images img
+{
+    width: 100px;
+}
+
+
+header nav .nav-top .nav-right
+{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* background-color: blue; */
+}
+
+header nav .nav-top .nav-right .navbar-menu-button
+{
+    font-family: "Oswald";
+    display: flex;
+    align-items: center;
+    /* background-color: orangered; */
+}
+
+header nav .nav-top .nav-right .navbar-menu-button img
+{
+    padding: 1.3rem;
+    height: 100%;
+}
+
+header nav .nav-top .nav-right .navbar-menu-button:hover
+{
+    cursor: pointer;
+}
+
+
+header nav .nav-top .nav-right .social-media-buttons,
+footer .footer-grid .social-media-buttons
+{
+    display: flex;
+    margin-right: 6rem;
+    /* background-color: green; */
+}
+
+header nav .nav-top .nav-right .social-media-button-img,
+footer .footer-grid .social-media-button-img
+{
+    padding: 1rem;
+}
+
+header nav .nav-top .nav-right .social-media-button-img img,
+footer .footer-grid .social-media-button-img img
+{
+    height: 30px;
+}
+
+header nav .nav-top .nav-right .social-media-button-img img:hover,
+footer .footer-grid .social-media-button-img img:hover
+{
+    cursor: pointer;
+}
+
+header nav .nav-bottom
+{
+    background-color: #090979;
+    display: flex;
+}
+
+header nav .nav-bottom .navbar-sections
+{
+    font-family: "Oswald";
+    width: 70%;
+    padding: 1rem;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1rem;
+}
+
+header nav .nav-bottom .navbar-sections a
+{
+    color: white;
+    text-decoration: none;
+}
+
+header nav .nav-bottom .navbar-sections a:hover
+{
+    text-decoration: underline;
+}
+
+header nav .nav-bottom .search-bar
+{
+    margin: auto;
+}
+
+header nav .nav-bottom .search-bar input
+{
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    font-family: "Oswald";
+    padding: 0.5rem;
+    background-color: #090979;
+    border: none;
+    border-bottom: 3px solid white;
+    z-index: 1;
+}
+
+header nav .nav-bottom .search-bar input::placeholder
+{
+    color: white;
+    opacity: 1;
+}
+
+header nav .nav-bottom .search-bar input:focus
+{
+    outline: none;
+}
+
+header nav .nav-bottom .search-bar button
+{
+    position: relative;
+    background-color: #090979;
+    margin-left: -2rem;
+    width: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* padding-right: 0.5rem; */
+    border: none;
+    z-index: 99;
+}
+
+header nav .nav-bottom .search-bar button img
+{
+    border: none;
+    z-index: 99;
+}
+
+header nav .nav-bottom .search-bar button img:hover
+{
+    cursor: pointer;
+}
+
+/*MEDIA QUERIES SECCION DE BARRA DE NAVEGACION*/
+
+@media (max-width: 796px)
+{
+    header nav .nav-top
+    {
+        flex-direction: column;
+    }
+
+    header nav .nav-top .nav-right 
+    {
+        display: none;
+    }
+
+    header nav .nav-bottom .navbar-sections,
+    header nav .nav-bottom .search-bar input
+    {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 564px)
+{
+    header nav .nav-top .nav-left .logo .logo-text a
+    {
+        padding: 2rem;
+        font-size: 1.2rem;
+    }
+
+
+    header nav .nav-top .nav-left .logo-images img
+    {
+        width: 60px;
+    }
+
+    header nav .nav-bottom .navbar-sections, header nav .nav-bottom .search-bar input
+    {
+        font-size: 0.5rem;
+    }
+}
+
+
+/****************************************ESTILOS PARA EL CUERPO Y EL FOOTER *************************************************/
+
+.wrapper-grid
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "main-content"
+                         "footer";
+}
+
+main
+{
+    grid-area: main-content;
+    width: 90%;
+    margin: 14rem auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main .blue-border-div
+{
+    border: 10px solid #090979;
+    border-bottom: none;
+}
+
+main .blue-border-div .top-stories-header
+{
+    width: max-content;
+    margin: auto;
+    margin-top: -42px;
+    padding: 1rem;
+    background-color: #FFF;
+    font-family: 'Oswald';
+}
+
+.white-background-div
+{
+    background-color: white;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+}
+
+/***************************************ESTILOS SECCION "MEJORES HISTORIAS"*****************************************************/
+
+.top-stories-grid
+{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "big tiny" 
+                "big tiny" 
+                "big tiny";
+    grid-template-columns: 75% 25%;
+}
+
+.top-stories-grid .big
+{
+    z-index: 2;
+    position: relative;
+    grid-area: big;
+    background-color: rebeccapurple;
+}
+
+.top-stories-grid .big img
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.top-stories-grid .story-heading,
+.recommended-news .story-heading 
+{
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    background-color: rgba(60, 60, 60, 0.4);
+    width: 100%;
+    font-family: "Oswald";
+    color: white;
+    text-align: justify;
+}
+
+.top-stories-grid .story-heading:hover,
+.recommended-news .story-heading:hover 
+{
+    cursor: pointer;
+    background-color: rgba(120, 120, 120, 0.4);
+}
+
+.top-stories-grid .big .story-heading 
+{
+    height: min-content;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.top-stories-grid .tiny
+{
+    z-index: 2;
+    position: relative;
+    grid-area: tiny;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.top-stories-grid .tiny .tiny-story
+{ 
+    position: relative; 
+}
+
+
+
+.top-stories-grid .tiny .tiny-story img
+{
+    height: 100%;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+
+.top-stories-grid .tiny .story-heading 
+{
+    height: min-content;
+    padding: 0.5rem;
+}
+
+/*MEDIA QUERIES SECCION DE MEJORES HISTORIAS*/
+@media (max-width: 796px)
+{
+    .top-stories-grid
+    {
+        grid-template-columns: 100%;
+        width: 90%;
+        margin: auto;
+    }    
+
+    .top-stories-grid
+    {
+        grid-template-areas: "big" 
+                             "tiny";
+    }
+
+
+    .top-stories-grid .big
+    {
+        height: 50vh;
+    }
+
+    .top-stories-grid .big .story-heading 
+    {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .top-stories-grid .tiny
+    {
+        flex-direction: row;
+    }
+
+    .top-stories-grid .tiny .tiny-story
+    {
+        width: 100%;
+    }
+
+    .top-stories-grid .tiny .story-heading 
+    {
+        padding: 1rem;
+        font-size: 2.3vw;
+    }
+}
+
+/*****************************ESTILOS SECCION DE NOTICIAS RECIENTES Y BOLETIN INFORMATIVO ******************************************/
+.flex-latest-newsletter
+{
+    margin: auto;
+    margin-top: 4rem;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest-news
+{
+    width: 65%;
+    /* background-color: pink; */
+    border-top: 10px solid #090979;
+}
+
+.flex-latest-newsletter .latest-news-header
+{
+    width: max-content;
+    margin-top: -42px;
+    padding: 1rem;
+    background-color: white;
+    font-family: "Oswald";
+}
+
+.latest-news .news-flex
+{
+    /* background-color: gray; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-story
+{
+    border-top: 2px solid black;
+    /* background-color: orange; */
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.single-story:hover,
+.single-post:hover
+{
+    cursor: pointer;
+    background-color: #DDD;
+}
+
+
+.single-story .story-thumbnail
+{
+    width: 30%;
+    /* background-color: red; */
+}
+
+.single-story .story-thumbnail img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.single-story .story-info 
+{
+    width: 70%;
+    /* height: 10rem; */
+    /* background-color: silver; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+ .single-story .story-info a
+{
+    padding: 1rem 0 0 1rem;
+    font-family: "Oswald";
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.single-story .story-info a:hover
+{
+    text-decoration: underline;
+    color: purple;
+}
+
+
+.single-story .story-info p
+{
+    font-family: "Open Sans";
+    font-weight: 100;
+    padding: 1rem 0 0 1rem;
+}
+
+.more-stories-btn
+{
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #090979;
+    font-size: 1rem;
+    color: white;
+    border: none;
+}
+
+.more-stories-btn:hover
+{
+    cursor: pointer;
+    background-color: #2B2B92;
+}
+
+.newsletter-column
+{
+    width: 30%;
+    /* background-color: green; */
+}
+
+.newsletter-column .newsletter-form
+{
+    border: 10px solid #090979;
+    background-color: white;
+    position: sticky;
+    top: 250px;
+}
+
+.newsletter-column .newsletter-form .newsletter-form-header
+{
+    background-color: rgb(173, 143, 143);
+    width: max-content;
+    margin: auto;
+    margin-top: -42px;
+    padding: 1rem;
+    background-color: white;
+    font-family: "Oswald";
+}
+
+.newsletter-column .newsletter-form .flex-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    font-family: "Open Sans";
+}
+
+.newsletter-column .newsletter-form .flex-form > p
+{
+    font-size: 1.5rem;
+}
+
+.newsletter-column .newsletter-form .flex-form input
+{
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid gray;
+}
+
+.newsletter-column .newsletter-form .flex-form button
+{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #090979;
+    font-size: 1rem;
+    color: white;
+    border: none;
+}
+
+.newsletter-column .newsletter-form .flex-form button:hover
+{
+    cursor: pointer;
+    background-color: #2B2B92;
+}
+
+/*MEDIA QUERIES PARA LA SECCION DE ULTIMAS NOTICIAS Y NEWSLETTER*/
+
+
+@media (max-width: 796px)
+{
+    .flex-latest-newsletter
+    {
+        flex-direction: column;
+    }
+
+    .latest-news
+    {
+        width: 100%;
+    }
+
+    .latest-news .news-flex .single-story .story-thumbnail
+    {
+        width: 40%;
+    }
+
+    .latest-news .news-flex .single-story .story-info
+    {
+        width: 60%;
+    }
+
+    .latest-news .news-flex .single-story .story-info h2
+    {
+        font-size: 1.5rem;
+    }
+
+    .latest-news .news-flex .single-story .story-info p
+    {
+        padding: 1rem 0 0 1rem;
+        font-size: 1rem;
+    }
+
+
+
+    .newsletter-column
+    {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+
+/********************************************* ESTILOS DEL FOOTER *********************************************************/
+
+footer
+{
+    padding: 4rem;
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer .footer-grid
+{
+    margin: auto;
+    display: grid;
+    grid-template-areas: "logo"
+                         "links"
+                         "social-media-btns";
+    /* border: 2px solid yellow; */
+}
+
+footer .footer-grid .logo
+{
+    margin: auto;
+    grid-area: logo;
+    /* background-color: rebeccapurple; */
+    display: flex;
+}
+
+footer .footer-grid .logo .logo-text
+{
+    flex-basis: 70%;
+    display: flex;
+    font-family: "Major Mono Display";
+    /* background-color: rebeccapurple; */
+}
+
+footer .footer-grid .logo .logo-text h2
+{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+
+footer .footer-grid .logo .logo-images
+{
+    /* background-color: green; */
+    display: flex;
+}
+
+footer .footer-grid .logo .logo-images img
+{
+    width: 100px;
+}
+
+footer .footer-grid .logo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+footer .footer-grid .links
+{
+    grid-area: links;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    font-family: "Open Sans";
+    list-style: none;
+}
+
+footer .footer-grid .links a
+{
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem 0 1rem
+}
+
+footer .footer-grid .links a:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/***************************LAS DEMAS PROPIEDADES DE ESTOS BOTONES ESTAN DEFINIDAS ARRIBA ***************************************/
+footer .footer-grid .social-media-buttons
+{
+    grid-area: social-media-btns;
+    margin: auto;
+    /* background-color: orange; */
+    justify-content: center;
+}
+
+@media (max-width: 670px)
+{
+    footer .footer-grid .logo
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-grid .logo .logo-text h2
+    {
+        font-size: 5vw;
+    }
+
+    footer .footer-grid .logo .logo-images img
+    {
+        width: 60px;
+    }
+
+    footer .footer-grid .links
+    {
+        flex-direction: column;
+    }
+
+}
+
+/**************************************************ESTILOS PAGINA DE POSTS ******************************************************/
+
+/* TODO EL MAIN ES OTRA CLASE PARA CADA POST, LO UNICO REUTILIZADO FUE EL TINY, RENOMBRADO COMO RECOMMENDED, SIN EL GRID-AREAS
+ANTERIOR
+*/
+.post-main
+{
+    grid-area: main-content;
+    width: 100%;
+    margin: 14rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-grid
+{
+    /* background-color: purple; */
+    display: grid;
+    grid-template-areas: "post-header post-header"
+                         "body-recommended-wrap body-recommended-wrap"
+                         "post-comments post-comments";
+}
+
+.post-header
+{
+    grid-area: post-header;
+    width: 85%;
+    margin: auto;
+    /* background-color: yellow; */
+}
+
+.post-header p { 
+    font-family: "Open Sans"; 
+    font-weight: 100; 
+    font-size: 1.2em;
+}
+
+.post-header h2
+{ 
+    font-family: "Oswald"; 
+    font-size: 2.5em; 
+}
+
+.post-header .writter-social-media-icons
+{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    /* background-color: rebeccapurple; */
+}
+
+.post-header .share-btns{ display: flex; align-items: center;}
+.post-header .share-btns img {width: 50px; padding: 1em;}
+.post-header .share-btns img:hover {cursor: pointer;}
+
+.body-recommended-wrapper
+{
+    grid-area: body-recommended-wrap;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.post-body
+{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.post-body p{ font-size: 1rem;}
+
+.post-body .post-main-img img,
+.post-text-content
+{
+    width: 100%;
+}
+
+.post-text-content
+{
+    font-family: "Open Sans";
+    font-size: 1.25rem;
+    padding: 2em 0 1em 0;
+    text-align: justify;
+}
+
+.recommended
+{
+    width: 20%;
+    /* background-color: orange; */
+}
+
+.recommended-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 250px;
+}
+
+.recommended-header
+{
+    /* background-color: orange; */
+    font-family: "Oswald"; 
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 10px solid #090979;
+    margin-top: -3rem;
+}
+
+.recommended-news
+{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: stretch;
+    margin: 1rem 0 2rem 0;
+}
+
+ .recommended-news .tiny-story
+{ 
+    position: relative; 
+}
+
+.recommended-news .tiny-story:hover
+{
+    cursor: pointer;
+}
+
+.recommended-news .tiny-story img
+{
+    height: 100%;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+
+.recommended-news .story-heading 
+{
+    height: min-content;
+    padding: 0.5rem;
+}
+
+
+ 
+
+.post-comments
+{
+    grid-area: post-comments;
+    display: flex;
+    flex-direction: column;
+    background-color: #E0E0E0;
+}
+
+.post-comments-header
+{
+    margin-top: 2rem;
+    font-family: "Oswald"; 
+    font-size: 2em;
+    text-align: center;
+    color: #3A3A3A;
+}
+
+.publish-comment-div
+{
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    width: 80%;
+    background-color:#FBF8F8;
+    padding: 1rem;
+}
+
+.publish-comment-div textarea
+{
+    font-family: "Open Sans";
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: none;
+    background-color: #EDEDED;
+    margin: 2rem;
+    max-width: 70%;
+    min-width: 70%;
+    min-height: 300px;
+    resize: none;
+}
+
+.publish-btn
+{
+    font-family: "Oswald"; 
+    background-color: #00FF19;
+    color: white;
+    font-size: 2rem;
+    height: max-content;
+    align-self: flex-end;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: none;
+    width: 20%;
+}
+
+.publish-btn:hover
+{
+    cursor: pointer;
+    background-color: #00BB05;
+}
+
+.show-comments-btn
+{
+    border: none;
+    background-color: #090979;
+    color: white;
+    width: 50%;
+    margin: 2rem auto 2rem auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.show-comments-btn:hover
+{
+    cursor: pointer;
+    background-color: #1A1A8A;
+}
+
+/* ESTILOS RESPONSIVOS DE LA PAGINA DE POSTS */
+@media (max-width: 990px)
+{
+
+    .recommended-header
+    {
+        font-size: 1.5rem;
+    }
+    .story-heading
+    {
+        font-size: 0.8rem;
+    }
+
+    .publish-btn
+    {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 850px)
+{
+    .post-header .writter-social-media-icons
+    {
+        width: 100%;
+    }
+
+    .writter-social-media-icons p
+    {
+        font-size: 0.7rem;
+    }
+
+    .post-body
+    {
+        width: 100%;
+    }
+
+    .recommended
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 540px)
+{
+    .publish-comment-div
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publish-comment-div textarea
+    {
+        max-width: 90%;
+        min-width: 90%;
+        min-height: 200px;
+    }
+
+    
+    .publish-btn
+    {
+        font-size: 1.5rem;
+        padding: 1rem;
+        width: 50%;
+    }
+    
+    .publish-btn:hover
+    {
+        cursor: pointer;
+        background-color: #00BB05;
+    }
+}
+
+/*************************************************ESTILOS PAGINA ACERCA DE ****************************************************/
+.about
+{
+    grid-area: main-content;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: violet; */
+    margin-top: 10rem;
+    margin-bottom: 0;
+}
+
+.about-us-presentation
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('img/about-us-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-header
+{
+    font-family: "Oswald";
+    background-color: rgba(60, 60, 60, 0.4);
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us-text
+{
+    padding: 2rem;
+    text-align: justify;
+}
+
+.about-us-text h2,
+.contact-us h2
+{
+    text-align: center;
+    font-family: "Oswald";
+    color: black;
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.about-us-text p
+{
+    margin: auto;
+    width: 70%;
+    font-family: "Open Sans";
+    color: black;
+    font-size: 1rem;
+}
+
+.contact-us
+{
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: coral; */
+}
+
+.form-wrapper
+{
+    /* background-color: blue; */
+    margin: auto;
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+.form-wrapper .first-column
+{
+    width: 40%;
+    height: 16rem;
+    /* background-color: red; */
+}
+
+.form-wrapper .second-column
+{
+    flex-basis: 60%;
+    min-height: 16rem;
+    /* background-color: green; */
+}
+
+.form-wrapper input,
+.form-wrapper textarea
+{
+    font-family: "Open Sans";
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    box-shadow: 0px 2px 4px gray;
+}
+
+.form-wrapper input
+{
+    width: 90%;
+}
+
+.second-column textarea{
+    width: 100%; 
+    resize: none;
+    min-height: 14rem;
+}
+
+.contact-us button
+{
+    margin: auto;
+    width: 50%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.contact-us button:hover
+{
+    background-color: darkslategray;
+    cursor: pointer;
+}
+
+.contact-info
+{
+    display: flex;
+    background-color: #090979;
+    color: white;
+    font-size: 0.8rem;
+    padding: 4rem;
+    justify-content: center;
+    font-family: "Open Sans";
+}
+
+.contact-info figure
+{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info figure img
+{
+    width: 20%;
+}
+
+@media (max-width: 740px)
+{
+    .form-wrapper,
+    .contact-info
+    {
+        flex-direction: column;
+    }
+
+    .contact-info
+    {
+        align-items: center;
+    }
+
+    .contact-info figure
+    {
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .contact-info figure img
+    {
+        width: 15%;
+    }
+
+
+    .form-wrapper .first-column,
+    .form-wrapper .second-column,
+    .form-wrapper input
+    {
+        width: 100%;
+    }
+
+}
+
+/****************************************************ESTILOS PAGINA DE CATEGORIA******************************************************/
+.post-header .header-titulo
+{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2rem;
+} 
+
+.single-story-title{
+
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.single-story-short
+{
+    font-family: "Open Sans";
+    font-size: 2rem;
+}
+
+
+.writter-social-media-icons .pescritor{
+
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.single-post .single-story-title:hover
+{
+    color: purple;
+    text-decoration: underline;
+}
+
+.single-post figure img
+{
+    padding: 1rem 1rem 1rem 0;
+}
+
+/*************************************************ESTILOS PAGINA DE AVISO LEGAL Y PRIVACIDAD ***********************************************/
+.static
+{
+    grid-area: main-content;
+    width: 70%;
+    text-align: justify;
+}
+
+.static .headers
+{
+    margin: auto;
+    font-family: "Oswald";
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.static p
+{
+    font-family: "Open Sans";
+    font-size: 1rem;
+    font-weight: lighter;
+}
